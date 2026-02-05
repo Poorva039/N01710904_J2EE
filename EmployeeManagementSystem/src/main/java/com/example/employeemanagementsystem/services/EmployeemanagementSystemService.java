@@ -9,11 +9,6 @@ public class EmployeemanagementSystemService {
 
     private static List<Employee> employees = new ArrayList<>();
 
-    static {
-        employees.add(new Employee(1, "John", "Doe", "john@email.com"));
-        employees.add(new Employee(2, "Jane", "Smith", "jane@email.com"));
-    }
-
     public List<Employee> getAll() {
         return employees;
     }
