@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Employee</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      align-content: center;
+      text-align: center;
+    }
+
+    h1, h2 {
+      text-align: center;
+      font-weight: normal;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: auto;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #eeeeee;
+    }
+
+    form {
+      text-align: center;
+    }
+
+    input {
+      padding: 6px;
+      margin: 5px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      background-color: #e0e0e0;
+      border: 1px solid #bbb;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #d6d6d6;
+    }
+
+    a {
+      color: #444;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+</head>
+<body>
+
+<h1>Add Employee</h1>
+
+<form th:action="@{/addEmployee}" th:object="${employee}" method="post">
+  <input type="text" th:field="*{id}" placeholder="ID"><br>
+  <input type="text" th:field="*{firstName}" placeholder="First Name"><br>
+  <input type="text" th:field="*{lastName}" placeholder="Last Name"><br>
+  <input type="text" th:field="*{email}" placeholder="Email"><br>
+
+  <input type="submit" value="Save">
+</form>
+
+<br>
+<a th:href="@{/}">Back</a>
+
+</body>
+</html>
