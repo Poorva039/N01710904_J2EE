@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #8B4513;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .welcome {
+            font-size: 24px;
+            color: #8B4513;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .message {
+            text-align: center;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+        .coffee-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .coffee-link a {
+            background-color: #8B4513;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+        .coffee-link a:hover {
+            background-color: #A0522D;
+        }
+        .logout {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .logout a {
+            color: #8B4513;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="welcome" th:text="'Welcome ' + ${user.firstName} + ' ' + ${user.lastName} + '!'"></div>
+
+
+
+    <div class="logout">
+        <a th:href="@{/}">Logout</a>
+    </div>
+</div>
+</body>
+</html>
