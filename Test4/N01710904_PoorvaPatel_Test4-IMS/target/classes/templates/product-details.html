@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product Details</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="header">
+    Product Inventory Management System
+</div>
+
+<div class="container">
+
+    <h2>Product Details</h2>
+
+    <p><b>ID:</b> <span th:text="${product.id}"></span></p>
+    <p><b>Name:</b> <span th:text="${product.name}"></span></p>
+    <p><b>Description:</b> <span th:text="${product.description}"></span></p>
+    <p><b>Price:</b> <span th:text="${product.price}"></span></p>
+    <p><b>Stock:</b> <span th:text="${product.stock}"></span></p>
+
+    <br>
+
+    <form th:action="@{/products/stock/{id}(id=${product.id})}" method="post">
+        <input type="number" name="stock" placeholder="Update stock">
+        <input type="submit" value="Update Stock">
+    </form>
+
+    <br>
+    <a href="/products">Back</a>
+
+</div>
+
+</body>
+</html>

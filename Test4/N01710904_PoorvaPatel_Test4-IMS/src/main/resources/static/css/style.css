@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.header {
+    background-color: #001f3f;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #001f3f;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+}
+
+button, input[type="submit"] {
+    background-color: #001f3f;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    background-color: #001f3f;
+    padding: 6px 10px;
+    margin: 2px;
+    display: inline-block;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 70%;
+    padding: 8px;
+    margin: 5px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 15px 0;
+}
+
+/* LABEL LEFT SIDE */
+.form-group label {
+    width: 120px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* INPUT RIGHT SIDE */
+.form-group input {
+    flex: 1;
+    padding: 8px;
+}
